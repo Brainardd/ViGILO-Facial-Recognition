@@ -153,7 +153,7 @@ def draw_landmarks(frame, shape):
     '''
 
 # Face Processing Function
-# Processes a detected face, draws landmarks, predicts the emotion, and dont detect drowsiness if emotion is "Happy"   
+# processes a detected face, draws landmarks, predicts the emotion, and dont detect drowsiness if emotion is "Happy"   
 def process_region(frame, face):
     shape = predictor(cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY), face)
     shape = [(shape.part(i).x, shape.part(i).y) for i in range(68)]
