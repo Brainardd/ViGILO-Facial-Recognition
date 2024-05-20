@@ -55,7 +55,7 @@ def predict_emotion(face):
 # creates and displays a popup notification using tkinter when drowsiness is detected
 def show_popup():
     root = tk.Tk()
-    root.title("Drowsiness Alert")
+    root.title("ViGILO Drowsiness Alert")
 
     # Calculate popup window position
     screen_width = root.winfo_screenwidth()
@@ -134,7 +134,7 @@ def draw_landmarks(frame, shape):
     for (x, y) in shape:
         cv2.circle(frame, (x, y), 1, (0, 255, 0), -1)
         
-    ''' ( **I COMMENT SO IF ITS BETTER TO HAVE LINES FOR THE FACIAL STRUCTURE, I'LL UNCOMMENT**)
+    ''' ( **I COMMENT SO IF ITS BETTER TO HAVE LINES FOR THE FACIAL RECOGNITION, I'LL UNCOMMENT**)
     # lines between landmarks for visualization
     for i in range(1, 17):
         cv2.line(frame, shape[i], shape[i - 1], (0, 255, 0), 1)
@@ -179,7 +179,7 @@ def process_region(frame, face):
         cv2.putText(frame, f'{emotion}', (x, y + h + 30),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
 
-    cv2.imshow('Emoculus 1.0', frame)
+    cv2.imshow('ViGILO', frame)
 
 
 # Main Function
@@ -191,7 +191,7 @@ def main():
     if not cap.isOpened():
         print("Error: Could not open video device.")
         return
-    window_name = 'Emoculus 1.0'
+    window_name = 'ViGILO'
 
     try:
         while True:
