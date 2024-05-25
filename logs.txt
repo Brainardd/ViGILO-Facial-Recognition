@@ -1,1 +1,6 @@
 hehee say hi to da blag
+
+
+early_stop = EarlyStopping(monitor='val_loss', patience=5, verbose=1, restore_best_weights=True)
+lr_reduction = ReduceLROnPlateau(monitor='val_loss', patience=3, verbose=1, factor=0.2, min_lr=0.00001)
+model_checkpoint = ModelCheckpoint('best_model.h5', monitor='val_accuracy', save_best_only=True, save_weights_only=False)
