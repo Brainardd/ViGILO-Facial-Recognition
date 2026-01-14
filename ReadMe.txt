@@ -3,4 +3,5 @@ To run ViGILO.py = download the '.dat' file here: https://drive.google.com/drive
 Open in VsCode or any compiler and install the 'requirements.txt'
 type: "pip install -r requirements.txt"
 
-dlib was installed manually due to some compiler reasons, install dlib.
+dlib was installed manually due to some compiler reasons, install dlib. !
+
