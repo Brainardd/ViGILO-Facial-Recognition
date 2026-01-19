@@ -7,6 +7,4 @@ dlib was installed manually due to some compiler reasons, install dlib.
 
 
 
-@@@@
-
 
